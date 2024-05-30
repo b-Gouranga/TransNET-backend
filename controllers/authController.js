@@ -13,9 +13,9 @@ async function register(req, res) {
     const hashedPassword = await hashPassword(password);
     const newUser = await User.create(username, hashedPassword);
     
-    if (!newUser || newUser.length === 0) {
-      throw new Error('User creation failed. No data returned.');
-    }
+    // if (!newUser || newUser.length === 0) {
+    //   throw new Error('User creation failed. No data returned.');
+    // }
     
     res.status(201).json({ message: 'Registration successful' });
   } catch (error) {

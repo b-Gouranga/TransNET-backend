@@ -31,7 +31,7 @@ class User {
         throw new Error('Error creating user. Please try again.');
       }
   
-      console.log('New user data:', data);
+     // console.log('New user data:', data);
       return data;
     } catch (error) {
       console.error('Error in User.create:', error);
